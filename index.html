@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Choose Thai Food</label> <br>
+    <select name="industry" id="industry">
+
+        <option value="none"> </option>
+        <option value="Pizza">Pizza</option>
+        <option value="Thai Soup">Thai Soup</option>
+        <option value="Thai Biriyani">Thai Biriyani</option>
+        <option value="Audit">Audit</option>
+        <option value="Accounting">Accounting</option>
+       
+    </select>
+    
+    <p id="paragraph"></p>
+
+    
+    <script>
+       
+        var select = document.getElementById('industry');
+        var p = document.getElementById('paragraph')
+
+        select.addEventListener('change', () => {
+            p.innerHTML = select.options[select.selectedIndex].value;
+        })
+    </script>
+</body>
+</html>
